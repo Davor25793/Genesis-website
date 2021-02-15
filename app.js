@@ -3,6 +3,10 @@ const btnLeft = document.querySelector('#btnLeft')
 const btnRight = document.querySelector('#btnRight')
 let curSlide = 0;
 const maxSlide = slides.length;
+let auto = true;
+let slideInterval;
+const intervalTime = 5000;
+
 
 
 const goToSlide = function(slide){
@@ -19,6 +23,11 @@ const nextSlide = function(){
     curSlide++;
   }
 
+  if(auto){
+    clearInterval(slideInterval)
+    slideInterval = setInterval(nextSlide, intervalTime)
+  }
+
   goToSlide(curSlide)
   activateDot(curSlide)
 }
@@ -30,6 +39,11 @@ const prevSlide = function(){
     curSlide = maxSlide - 1
   }else{
     curSlide--;
+  }
+
+  if(auto){
+    clearInterval(slideInterval)
+    slideInterval = setInterval(prevSlide, intervalTime)
   }
 
   goToSlide(curSlide)
@@ -84,4 +98,8 @@ const activateDot = function(slide){
 
 activateDot(0)
 
+//Auto slide
+if(auto){
+  slideInterval = setInterval(nextSlide, intervalTime)
+}
 
