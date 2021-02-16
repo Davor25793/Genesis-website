@@ -12,34 +12,35 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <title>Portfolio website</title>
 </head>
-<body>
+<body id="home">
   <div class="navbar">
+    <div class="navbar-toggle">
+      <i class="fas fa-bars fa-2x"></i>
+    </div>
     <div class="container">
       <div class="navbar-container">
         <div class="navbar-logos">
           <i class="logo fab fa-buffer fa-2x"></i> <span class="heading"><a href="#">GENESIS</a></span>
         </div>
         <ul class="navbar-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Posts <i class="fas fa-angle-down"></i></a>
-            <ul>
-              <li><a href="#">Recent</a></li>
-              <li><a href="#">Archive</a></li>
-              <li><a href="#">Popular</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#about">About Us</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#why">Why us?</a></li>
+          <li><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li><a class="nav-link" href="#team">Team</a></li>
+          <li><a class="nav-link" href="#clients">Clients</a></li>
+          <li><a class="nav-link" href="#contact">Contact Us</a></li>
+          <div class="navbar-close">
+            <i class="fas fa-times fa-2x"></i>
+          </div>
         </ul>
       </div>
     </div>
   </div>
 
   <!--Showcase-->
-  <section class="showcase">
+  <section id="showcase" class="showcase">
     <div class="container">
       <div class="showcase-container">
         <div class="showcase-content">
@@ -58,7 +59,7 @@
   </section>
 
   <!--ABOUT-->
-  <section class="about">
+  <section id="about" class="about">
     <div class="container">
       <h2 class="about-heading">ABOUT US</h2>
       <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, molestias consequatur! Eligendi possimus qui sit nostrum placeat dolorum quisquam amet.</p>
@@ -105,7 +106,7 @@
   </section>
 
   <!--SERVICES-->
-  <section class="services">
+  <section id="services" class="services">
     <div class="container">
       <h2>SERVICES</h2>
       <p class="serve">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, molestias consequatur! Eligendisit quisquam amet. Lorem ipsum dolor sit amet.</p>
@@ -163,7 +164,7 @@
   </section>
 
   <!--Why us?-->
-  <section class="why">
+  <section id="why" class="why">
     <div class="container">
       <h2 class="text-center">Why choose us?</h2>
       <p class="para-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, molestias consequatur! Eligendisit quisquam amet. Lorem ipsum dolor sit amet.</p>
@@ -211,7 +212,7 @@
   </section>
 
   <!--TESTIMONIALS-->
-  <section class="testimonials">
+  <section id="testimonials" class="testimonials">
     <h2 class="text-center">TESTIMONIALS</h2>
       <div class="slider">
         <div class="slide">
@@ -251,7 +252,7 @@
   </section>
 
   <!--TEAM-->
-  <section class="team">
+  <section id="team" class="team">
     <h2 class="text-center">TEAM</h2>
     <p class="text-center team-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, expedita. At, repellendus.</p>
     <div class="container">
@@ -313,7 +314,7 @@
   </section>
 
   <!--CLIENTS-->
-  <section class="clients">
+  <section id="clients" class="clients">
     <h2 class="text-center">Our Clients</h2>
     <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, expedita. At, repellendus.</p>
     <div class="clients-container">
@@ -344,7 +345,7 @@
     </div>
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact">
     <h2 class="text-center">Our contact</h2>
     <div class="contact-items">
       <div class="map">

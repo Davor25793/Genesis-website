@@ -103,3 +103,31 @@ if(auto){
   slideInterval = setInterval(nextSlide, intervalTime)
 }
 
+
+//Smooth scroll
+document.querySelectorAll('.nav-link').forEach(function(el){
+  el.addEventListener('click', function(e){
+    // console.log('clicked')
+    e.preventDefault()
+
+    const id = this.getAttribute('href')
+    // console.log(id)
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth'
+    })
+  })
+})
+
+//Sticky navbar
+const navbar = document.querySelector('.navbar');
+const showcase = document.getElementById('showcase');
+const initCords = showcase.getBoundingClientRect();
+
+window.addEventListener('scroll', function() {
+  if(window.scrollY > initCords.top){
+    navbar.classList.add('navbar-sticky')
+  }else{
+    navbar.classList.remove('navbar-sticky')
+  }
+})
+
