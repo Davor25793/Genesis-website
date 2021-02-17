@@ -240,8 +240,7 @@ img{
 
   .serve{
     text-align: center;
-    width: 50%;
-    margin: 0 auto;
+    width: 100%;
     margin-top: 1rem;
   }
 
@@ -659,7 +658,7 @@ img{
     border: none;
     padding: .7rem 1.5rem;
     margin-top: 5px;
-    width: 50%;
+    width: 100%;
     font-size: 15px;
     cursor: pointer;
     outline: none;
@@ -752,11 +751,11 @@ img{
 }
 
 
-// .navbar-sticky{
-//   position: fixed;
-//   width: 100%;
-//   background: rgba(255,255,255, 0.7);
-// }
+.navbar-sticky{
+  position: fixed;
+  width: 100%;
+  background: rgba(255,255,255, 0.7);
+}
 
 .navbar-toggle{
   display: none;
@@ -808,6 +807,7 @@ img{
     display: flex;
     
   }
+
 
   .navbar-close{
     display: block;
@@ -862,6 +862,10 @@ img{
 
   .slide{
     padding: 0 4rem;
+  }
+
+  .number{
+    text-align: center;
   }
 
   #btnLeft,
@@ -1096,7 +1100,7 @@ img{
   }
 }
 
-@media(max-width:768px){
+@media(max-width:900px){
   .services-container .card{
     display: flex;
     flex-direction: column;
@@ -1107,6 +1111,132 @@ img{
 
     h3,p{
       text-align: center;
+    }
+  }
+
+  .services .serve{
+    width: 100%;
+  }
+
+
+  .para-center{
+    width: 100%;
+  }
+}
+
+@media(max-width:768px){
+  .dots{
+    position: absolute !important;
+    bottom: 0 !important;
+  }
+
+
+}
+
+@media(max-width: 1400px){
+  .services{
+    padding: 2rem;
+  }
+}
+
+@media(max-width: 950px){
+  .why-numbers{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:375px){
+  .dots{
+    display: none;
+  }
+
+  .showcase-heading{
+    font-size: 2.5rem;
+  }
+
+  .showcase{
+    height: 70vh;
+  }
+
+  .team-para{
+    font-size: .9rem;
+    font-weight: 700;
+  }
+
+  .showcase-picture{
+    display: none;
+  }
+
+  .cta{
+    text-align: center;
+  }
+ 
+   .cta a{
+      margin: 5px 0;
+    }
+
+}
+
+@media(max-width: 320px){
+  .about-img img{
+    width: 230px;
+  }
+
+  .navbar-list{
+    width: 200px;
+  }
+
+  .showcase{
+    display: block;
+    text-align: center;
+    height: 60vh;
+
+    &-heading{
+      font-size: 2.2rem;
+    }
+  }
+
+  .cta a{
+    margin: 5px 0;
+  }
+
+  .why h2{
+    font-size: 1.6rem;
+    
+  }
+
+  .why-content .card{
+
+    h3{
+      font-size: 1.2rem;
+    }
+  }
+
+  .clients h2{
+    font-size: 1.8rem;
+  }
+
+  .address p{
+   font-size: .85rem;
+   
+  }
+
+  .footer-container{
+
+    div:nth-child(2){
+      h2{
+        font-size: 1.5rem;
+      }
+    }
+
+    .social{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: .5rem;
+    }
+
+    input{
+      margin-top: 10px;
     }
   }
 }
