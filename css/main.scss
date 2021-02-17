@@ -109,6 +109,7 @@ img{
     font-size: 4rem;
     line-height: 1.2;
     color: #fff;
+    animation: animate-heading 1.5s ease-in .5s backwards;
   }
 
   &-content{
@@ -116,6 +117,10 @@ img{
     flex-direction: column;
     justify-content: center;
     
+  }
+
+  .showcase-content .lead{
+    animation: animate-lead 1.5s ease-in 1.5s backwards;;
   }
 
   &-picture{
@@ -129,6 +134,7 @@ img{
   margin-top: 10px;
   padding: 15px 0;
   // width: 50%;
+  animation: animate-cta 1.5s ease-in 1s backwards;
 
 }
 
@@ -751,11 +757,11 @@ img{
 }
 
 
-.navbar-sticky{
-  position: fixed;
-  width: 100%;
-  background: rgba(255,255,255, 0.7);
-}
+// .navbar-sticky{
+//   position: fixed;
+//   width: 100%;
+//   background: rgba(255,255,255, 0.7);
+// }
 
 .navbar-toggle{
   display: none;
@@ -1238,6 +1244,49 @@ img{
     input{
       margin-top: 10px;
     }
+  }
+}
+
+//Animations
+@keyframes animate-heading{
+  0%{
+    transform: translateX(-1000px)
+  }
+
+  80%{
+    transform: translateX(200px);
+  }
+
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes animate-cta{
+  0%{
+    transform: translateX(-1000px)
+  }
+
+  80%{
+    transform: translateX(200px);
+  }
+
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@keyframes animate-lead{
+  0%{
+    transform: translateX(-1000px)
+  }
+
+  80%{
+    transform: translateX(200px);
+  }
+
+  100%{
+    transform: translateX(0);
   }
 }
 
