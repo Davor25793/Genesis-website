@@ -118,16 +118,31 @@ document.querySelectorAll('.nav-link').forEach(function(el){
   })
 })
 
-//Sticky navbar
-const navbar = document.querySelector('.navbar');
-const showcase = document.getElementById('showcase');
-const initCords = showcase.getBoundingClientRect();
+// //Sticky navbar
+// const navbar = document.querySelector('.navbar');
+// const showcase = document.getElementById('showcase');
+// const initCords = showcase.getBoundingClientRect();
+// const navToggle = document.querySelector('.navbar-toggle')
 
-window.addEventListener('scroll', function() {
-  if(window.scrollY > initCords.top){
-    navbar.classList.add('navbar-sticky')
-  }else{
-    navbar.classList.remove('navbar-sticky')
-  }
+// window.addEventListener('scroll', function() {
+//   if(window.scrollY > initCords.top){
+//     navbar.classList.add('navbar-sticky')
+//     navToggle.style.top = '30px'
+//   }else{
+//     navbar.classList.remove('navbar-sticky')
+//   }
+// })
+
+//Sidebar
+const navbarToggle = document.querySelector('.navbar-toggle')
+const navbarClose = document.querySelector('.navbar-close')
+const navbarList = document.querySelector('.navbar-list')
+
+navbarToggle.addEventListener('click', () => {
+  navbarList.classList.toggle('active')
+})
+
+navbarClose.addEventListener('click', () => {
+  navbarList.classList.toggle('active')
 })
 
